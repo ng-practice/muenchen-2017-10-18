@@ -10,4 +10,8 @@ export class AppComponent {
   greeting = 'Hallo Leipzig!';
 
   color = 'red';
+
+  showMessage(message: string) {
+    window.confirm(message);
+  }
 }
