@@ -1,0 +1,7 @@
+<button (click)="isHidden = !isHidden">
+  Toggle <code>info-box</code>
+</button>
+
+<div [hidden]="isHidden">
+  <p>My secret message! =)</p>
+</div>

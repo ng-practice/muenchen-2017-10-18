@@ -3,12 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { PlaygroundModule } from './playground/playground.module';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+
+    PlaygroundModule
   ],
   providers: [],
   bootstrap: [AppComponent]
