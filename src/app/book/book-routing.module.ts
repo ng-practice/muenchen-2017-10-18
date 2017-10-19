@@ -1,3 +1,4 @@
+import { NavigateAway } from './core/navigate-away.guard';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -11,13 +12,18 @@ const routes: Routes = [
     component: BookComponent,
     children: [
       { path: '', component: BookListComponent },
-      { path: ':isbn', component: BookDetailsComponent }
+      {
+        path: ':isbn',
+        component: BookDetailsComponent,
+        canDeactivate: [NavigateAway]
+      }
     ]
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [NavigateAway]
 })
 export class BooksRoutingModule { }
