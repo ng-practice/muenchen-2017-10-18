@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app-routing.module';
 import { BookModule } from './book/book.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,7 +15,9 @@ import { PlaygroundModule } from './playground/playground.module';
     BrowserModule,
 
     PlaygroundModule,
-    BookModule
+    BookModule,
+
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
