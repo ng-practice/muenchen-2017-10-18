@@ -18,7 +18,6 @@ import { BookComponent } from './book/book.component';
     BooksRoutingModule
   ],
   declarations: [BookListComponent, BookDetailsComponent, BookComponent],
-  exports: [BookListComponent],
   providers: [BookDataService]
 })
 export class BookModule { }
