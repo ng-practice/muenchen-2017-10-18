@@ -5,5 +5,10 @@
   <div class="card-body">
     <h4 class="card-title">{{ book.title }}</h4>
     <p class="card-text">{{ book.abstract }}</p>
+    <a
+      [routerLink]="['/books', book.isbn]"
+      class="card-link">
+      Details
+    </a>
   </div>
 </div>
