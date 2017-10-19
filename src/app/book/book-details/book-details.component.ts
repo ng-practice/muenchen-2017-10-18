@@ -11,9 +11,9 @@ import 'rxjs/add/operator/switchMap';
   styleUrls: ['./book-details.component.scss']
 })
 export class BookDetailsComponent implements OnInit {
-  book: Book;
+  book: Book = {} as Book;
 
-  constructor(private route: ActivatedRoute, private books: BookDataService) { }
+  constructor(private route: ActivatedRoute, private books: BookDataService) {}
 
   ngOnInit() {
     this.route.params
