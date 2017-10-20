@@ -1,4 +1,5 @@
 import { AppPage } from './app.po';
+import { browser } from 'protractor';
 
 describe('muenchen App', () => {
   let page: AppPage;
@@ -12,5 +13,12 @@ describe('muenchen App', () => {
 
     expect(page.getTitle())
       .toEqual('Bücher');
+  });
+
+  it('should navigate to details', () => {
+    page.navigateTo();
+    page.clickFirstDetailLink();
+
+    expect(browser.getCurrentUrl()).toMatch(/books\/.+$/);
   });
 });
